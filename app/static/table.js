@@ -29,7 +29,6 @@ function drawTable() {
         <td>${values.Wady}</td>
         <td>${values.Zalety}</td>
         <td>${values.Ocena}</td>
-        <td><button>json</button></td
     </tr>`;
     });
     document.getElementById('table-body').innerHTML=tableData;
