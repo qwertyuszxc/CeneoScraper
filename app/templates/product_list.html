@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class = 'container'>
+    <table class="table display" style="width: 100%;">
+        <thead class = 'thead1'> 
+        <tr>
+            <th scope="col">ID produktu</th>
+            <th scope="col">Liczba opinii</th>
+            <th scope="col">Liczbę wad</th>
+            <th scope="col">Liczba zalet</th>
+            <th scope="col">Średnia ocenę</th>
+            <th scope="col">Pobrać</th>
+        </tr>
+        </thead>
+        <tbody id = "table-body">
+        </tbody>
+  </table>
+</div>
+<script src="{{url_for('static', filename='table.js')}}"></script>
+{% endblock %}
