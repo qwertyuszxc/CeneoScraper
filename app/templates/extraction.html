@@ -1,12 +1,17 @@
 {% extends 'layout.html' %}
+{% block title %}Pobieranie opinii o rodukcie{% endblock %}
 {% block content %}
-    <div class="d-flex flex-column gap-3 p-5 bg-dark text-light w-50 mx-auto my-5">
-        <h1 class="text-center">Wprowadź kod produktu</h1>
-        <div class="form-group">
-            <form class="d-flex justify-content-center gap-3">
-                <input type="number" class="form-control" placeholder="Wprowadź kod produktu">
-                <input type="submit" class="btn btn-primary mx-auto" value="Zatwierdź">
-            </form>
+<form method="POST" action="{{url_for('extract')}}">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="product_id" class="col-form-label">Kod produktu</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" required id="product_code" name="product_code" placeholder="Wpisz kod produktu" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+            <input type="submit" class="btn btn-success" value="Pobierz">
         </div>
     </div>
+</form>
 {% endblock %}

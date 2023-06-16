@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}Opinie o produkcie{% endblock %}
+{% block content %}
+<h3>{{product_code}}</h3>
+{{opinions|safe}}
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready( function () {
+        $('#opinions').DataTable();
+    } );
+</script>
+{% endblock %}
